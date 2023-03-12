@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "live-server index.html"
+    "dev": "live-server",
+    "pdf": "electron-pdf $INIT_CWD/index.html $INIT_CWD/Albert-Hilazo-Aguilera-resume.pdf"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "electron-pdf": "^20.0.0",
     "paper-css": "^0.4.1"
   },
   "devDependencies": {

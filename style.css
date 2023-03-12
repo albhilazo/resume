@@ -1,0 +1,159 @@
+:root {
+    --gray-dark-color: #23272a;
+    --teal-dark-color: #025b62;
+    --teal-light-color: #a3d7ca;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+* {
+    color: var(--gray-dark-color);
+}
+
+h1, h2, h3, h3 * {
+    color: var(--teal-dark-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+.sheet-layout {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+}
+
+.sheet-layout header {
+    flex: 1 100%;
+    margin-bottom: 1em;
+}
+
+.sheet-layout aside {
+    flex: 1;
+    padding-right: 0.5em;
+    border-right: 1px solid var(--teal-light-color);
+}
+
+.sheet-layout header+aside {
+    margin-top: 1em;
+}
+
+.sheet-layout aside section:not(:first-of-type) h3 {
+    margin-top: 1.5em;
+}
+
+.sheet-layout main {
+    flex: 2.5;
+    padding-left: 1.5em;
+}
+
+.list-style-reset {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#contact ul li {
+    margin-bottom: 0.25em;
+}
+
+#contact li::before {
+    content: '';
+    display: inline-block;
+    background-repeat: no-repeat;
+    height: 1em;
+    width: 1em;
+    position: relative;
+    top: 2px;
+    margin-right: 0.5em;
+    /* Color to filters from: https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(14%) sepia(100%) saturate(3827%) hue-rotate(175deg) brightness(82%) contrast(98%);
+}
+
+#contact li.location::before {
+    background-image: url(icons/location-dot-solid.svg);
+}
+#contact li.phone::before {
+    background-image: url(icons/phone-solid.svg);
+}
+#contact li.email::before {
+    background-image: url(icons/envelope-solid.svg);
+}
+#contact li.website::before {
+    background-image: url(icons/globe-solid.svg);
+}
+#contact li.linkedin::before {
+    background-image: url(icons/linkedin-in.svg);
+}
+#contact li.github::before {
+    background-image: url(icons/github.svg);
+}
+
+.tech-skills ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.tech-skills ul li {
+    padding: 0.2em;
+    margin: 0 0.4em 0.4em 0;
+    border: 2px dotted var(--teal-light-color);
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+#education .course,
+#languages .proficiency {
+    margin-bottom: 1em;
+}
+
+#education dt,
+#languages dt {
+    font-weight: bolder;    
+}
+
+#education dd,
+#languages dd {
+    margin-left: 0;
+}
+
+#education dd {
+    font-style: italic;
+}
+
+.experience .position .title {
+    margin-bottom: 0.5em;
+}
+
+.experience .position .sector,
+.experience .position .location-period {
+    font-style: italic;
+}
+
+.experience .position .sector,
+.experience .position .location-period,
+.experience .position .skills {
+    font-size: small;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+}
+
+.experience .position .description {
+    padding-left: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.experience .position .description li::marker {
+    color: var(--teal-dark-color);
+}
+
+.experience .position .description li:not(:last-child) {
+    margin-bottom: 0.5em;
+}

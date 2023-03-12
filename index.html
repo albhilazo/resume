@@ -4,190 +4,282 @@
     <meta charset="utf-8" />
     <title>Albert Hilazo Aguilera</title>
 
-    <link rel="stylesheet" href="style.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap">
+    <link rel="stylesheet" href="style.css" />
+
     <style>@page { size: A4 }</style>
   </head>
   <body class="A4">
-    <header></header>
-    <main>
-      <section class="sheet padding-10mm">
-        <section id="contact">
-          <h1>Albert Hilazo Aguilera</h1>
-          <ul>
-            <li>Barcelona, Spain</li>
-            <li>+34 651015548</li>
-            <li>albhilazo.com</li>
-            <li>albhilazo@gmail.com</li>
-            <li>linkedin.com/in/albhilazo</li>
-            <li>github.com/albhilazo</li>
-          </ul>
-        </section>
+
+    <div class="sheet padding-10mm sheet-layout">
+      <header>
+        <h1>Albert Hilazo Aguilera</h1>
 
         <section id="profile">
-          <h2>Profile</h2>
-          I'm a full-stack software engineer with a wide background of roles and environments, always with a strong interest in the related best practices.
-          Currently focused on web development and setting path to team leadership.
+          <h2 hidden>Profile</h2>
+          <p>A full-stack software engineer with a wide background of roles and environments, always with a strong interest in the related best practices.
+          Currently focused on web development and setting path to team leadership.</p>
         </section>
-
-        <section id="tech-skills">
-          <h2>Technical Skills</h2>
-          <h3 hidden>Programming languages</h3>
-          <ul>
+      </header>
+      <aside>
+        <section id="contact">
+          <h2 hidden>Contact</h2>
+          <ul class="list-style-reset">
+            <li class="location">Barcelona, Spain</li>
+            <li class="phone">+34 651015548</li>
+            <li class="email">albhilazo@gmail.com</li>
+            <li class="website"><a href="https://albhilazo.com">albhilazo.com</a></li>
+            <li class="linkedin"><a href="https://linkedin.com/in/albhilazo">linkedin.com/in/albhilazo</a></li>
+            <li class="github"><a href="https://github.com/albhilazo">github.com/albhilazo</a></li>
+          </ul>
+        </section>
+        <h2 hidden>Technical Skills</h2>
+        <section id="programming-languages" class="tech-skills">
+          <h3>Programming languages</h3>
+          <ul class="list-style-reset">
             <li>JavaScript</li>
+            <li>TypeScript</li>
             <li>Node.js</li>
-            <li>AngularJS</li>
             <li>Vue.js</li>
-            <li>React Native</li>
-            <li>Python</li>
-            <li>Pandas</li>
+            <li hidden>AngularJS</li>
+            <li>React</li>
+            <li hidden>React Native</li>
             <li>Java</li>
             <li>Spring Boot</li>
             <li>PHP</li>
+            <li>Python</li>
+            <li>Pandas</li>
+            <li hidden>Symfony Framework</li>
             <li>Perl</li>
             <li>HTML5</li>
             <li>CSS3</li>
             <li>Bash</li>
-            <li>SQL</li>
+            <li hidden>SQL</li>
           </ul>
-          <h3 hidden>Tools and technologies</h3>
-          <ul>
-            <li>AWS</li>
-            <li>Azure</li>
-            <li>CloudFormation</li>
-            <li>AWS CDK</li>
-            <li>Terraform</li>
-            <li>Datadog</li>
-            <li>Docker</li>
-            <li>Vagrant</li>
-            <li>Ansible</li>
-            <li>Puppet</li>
-            <li>Jenkins</li>
-            <li>Git</li>
-            <li>Subversion</li>
-            <li>Elasticsearch</li>
-            <li>Jupyter Notebook</li>
-            <li>Apache AirFlow</li>
-            <li>Hotjar</li>
-            <li>Google Analytics</li>
-          </ul>
-          <h3>Interests, practices and methodologies</h3>
-          <ul>
-            <li>Linux systems</li>
-            <li>DevOps</li>
-            <li>Observability</li>
-            <li>Site Reliability Engineering</li>
-            <li>Infrastructure as Code</li>
+        </section>
+        <section id="practices-methodologies" class="tech-skills">
+          <h3>Practices and methodologies</h3>
+          <ul class="list-style-reset">
+            <li>Test-Driven Development</li>
+            <li>Behavior-Driven Development</li>
             <li>Pair Programming</li>
             <li>Trunk-based Development</li>
             <li>Continuous Integration</li>
-            <li>Continuous Deployment</li>
-            <li>Domain-Driven Design</li>
+            <li>Continuous Delivery</li>
+            <li>SOLID Principles</li>
             <li>Clean Architecture</li>
-            <li>SOLID</li>
-            <li>Test-Driven Development</li>
-            <li>Behaviour-Driven Development</li>
+            <li>Domain-Driven Design</li>
+            <li>Experimental Design</li>
+            <li hidden>People Care</li>
+            <li hidden>People Development</li>
+            <li>On-call Support</li>
+            <li>Service Levels</li>
+            <li>DevOps</li>
+            <li>Site Reliability Engineering</li>
+            <li>Infrastructure as Code</li>
+            <li hidden>Linux systems</li>
+            <li>Observability</li>
           </ul>
         </section>
-
-      </section>
-      <section class="sheet padding-10mm">
-
-        <section id="experience">
+      </aside>
+      <main>
+        <section id="recent-experience" class="experience">
           <h2>Professional Experience</h2>
 
-          <article>
-            <h3>Senior Consultant Developer, <a href="https://www.thoughtworks.com">Thoughtworks</a></h3>
-            <p>Technology consultancy. Software engineering.</p>
-            <p>Barcelona, Oct 2020 - Present</p>
-            <p>JavaScript, Vue.js, Java, Spring Boot, Python, Pandas, AirFlow, AWS, Datadog</p>
-            <ul>
-              <li>Delivered projects and learned the domain for multiple industries including non-profit, energy and online marketplaces.</li>
+          <article class="position">
+            <h3 class="title">Senior Consultant Developer, <a href="https://www.thoughtworks.com">Thoughtworks</a></h3>
+            <p class="sector">Technology consultancy. Software engineering.</p>
+            <p class="location-period">Barcelona, Oct 2020 - Present</p>
+            <ul class="description">
+              <li>Delivered projects and learned the domain for multiple industries including non-profit, energy, medical innovation and online marketplaces.</li>
               <li>Took on a wide range of roles and responsibilities. From full-stack development to on-call SRE, as Individual Contributor and Tech Lead or Engineering Manager.</li>
-              <li>Led the technical direction of a 6-person team and fostered growth of its members, increasing involvement in backlog definition and reducing knowledge silos.</li>
+              <li>Led the technical direction of a 6-person team and encouraged the growth of its members, increasing involvement in backlog definition and reducing knowledge silos.</li>
               <li>Defined our team roadmap in coordination with the Product Manager and aligned our priorities with other teams' managers.</li>
-              <li>Helped new and existing teams in the adoption of practices such as Pair Programming, Test-Driven Development (TDD), Trunk-based Development and Continuous Deployment.</li>
-              <li>Developed customer-facing web features following an experimentation approach, using metrics and user interviews to validate hypothesis and guide efforts in feature development.[NPS INCREASE?]</li>
+              <li>Helped new and existing teams in the adoption of practices such as Pair Programming, Test-Driven Development (TDD), Trunk-based Development and Continuous Delivery.</li>
+              <li>Developed customer-facing web features following an experimentation approach, using metrics and user interviews to validate hypotheses and guide efforts in feature development.</li>
               <li>Designed and developed a flexible workflow of data manipulation processes, which enabled adding and removing experimental features without impacting the user experience.</li>
             </ul>
+            <p class="skills">JavaScript, TypeScript, Node.js, Vue.js, Java, Spring Boot, Python, Pandas, AirFlow, AWS, AWS CDK, Terraform, Datadog</p>
           </article>
 
-          <article>
-            <h3>Consultant Developer, <a href="https://www.thoughtworks.com">Thoughtworks</a></h3>
-            <p>Technology consultancy. Software engineering.</p>
-            <p>Barcelona, Jan 2018 - Oct 2020</p>
-            <p>JavaScript, React Native, Python, AWS, Kubernetes, Elasticsearch, Datadog</p>
-            <ul>
+          <article class="position">
+            <h3 class="title">Consultant Developer, <a href="https://www.thoughtworks.com">Thoughtworks</a></h3>
+            <p class="sector">Technology consultancy. Software engineering.</p>
+            <p class="location-period">Barcelona, Jan 2018 - Oct 2020</p>
+            <ul class="description">
               <li>Maintained infrastructure and covered on-call for 250 production services, then guided development teams to adopt DevOps and Observability practices in order to manage them on their own.</li>
               <li>Facilitated multiple workshops on how to define Service Level Objectives and identify alerting criticality for different services.</li>
-              <li>Maintained platform infrastructure such as Kubernetes and Elasticsearch clusters for compute and logging purposes respectively.</li>
+              <li>Maintained platform infrastructure such as Kubernetes and Elasticsearch clusters for compute and logging purposes respectively, while identifying points of improvement and cost reduction.</li>
               <li>Built platform tooling to help development teams handle their AWS resources and Datadog monitoring using Infrastructure as Code.</li>
-              <li>Adjusted services to be migrated from a datacenter to the cloud using a "lift and shift" approach.</li>
+              <li hidden>Adjusted services to be migrated from a datacenter to the cloud using a "lift and shift" approach.</li>
               <li>Built and published a mobile application using cryptographic protocols for low-scale electronic voting.</li>
-              <li>Developed backend services integrating the components of a personal data protection platform jointly built by multiple european partners.</li>
+              <li>Developed backend services integrating the components of a personal data protection platform built in partnership with multiple european companies.</li>
             </ul>
+            <p class="skills">JavaScript, TypeScript, React Native, Python, AWS, AWS CloudFormation, AWS CDK, Kubernetes, Elasticsearch, Datadog</p>
           </article>
         </section>
-      </section>
-      <section class="sheet padding-10mm">
-        <section id="experience">
+      </main>
+    </div>
 
-          <article>
-            <h3>Software Engineer, <a href="https://capside.com">CAPSiDE</a></h3>
-            <p>Cloud infrastructure consultancy. Internal and product development.</p>
-            <p>Barcelona, Jan 2016 - Jan 2018</p>
-            <p>Perl, Node.js, AngularJS, Vue.js, Elasticsearch, AWS, Azure, Ansible, Docker</p>
-            <ul>
-              <li>Delivered full-stack development for a set of internal web applications, including internal tooling and also products focused on managing cloud infrastructure for AWS and Azure</li>
+    <div class="sheet padding-10mm sheet-layout">
+      <aside>
+        <section id="tools-technologies" class="tech-skills">
+          <h3>Tools and technologies</h3>
+          <ul class="list-style-reset">
+            <li>AWS</li>
+            <li hidden>Azure</li>
+            <li>Datadog</li>
+            <li>AWS CloudFormation</li>
+            <li>AWS CDK</li>
+            <li>Terraform</li>
+            <li>Ansible</li>
+            <li>Puppet</li>
+            <li>Vagrant</li>
+            <li>Git</li>
+            <li>Jenkins</li>
+            <li>Apache AirFlow</li>
+            <li>Google Analytics</li>
+            <li>Hotjar</li>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+            <li>Elasticsearch</li>
+            <li hidden>MySQL</li>
+            <li hidden>PostgreSQL</li>
+            <li hidden>Jupyter Notebook</li>
+            <li hidden>Subversion</li>
+          </ul>
+        </section>
+        <section id="education">
+          <h3>Education</h3>
+          <dl>
+            <div class="course">
+              <dt>Architecting on AWS</dt>
+              <dd>CAPSiDE AWS Training</dd>
+            </div>
+            <div class="course">
+              <dt>Essentials of System Administration Course LFS201</dt>
+              <dd>Linux Foundation</dd>
+            </div>
+            <div class="course">
+              <dt>Master's Degree in High Performance Web Programming</dt>
+              <dd>La Salle Barcelona</dd>
+            </div>
+            <div class="course">
+              <dt>Engineer's Degree in Computer Engineering</dt>
+              <dd>La Salle Barcelona</dd>
+            </div>
+          </dl>
+        </section>
+        <section id="languages">
+          <h3>Languages</h3>
+          <dl>
+            <div class="proficiency">
+              <dt>Native</dt>
+              <dd>Spanish</dd>
+              <dd>Catalan</dd>
+            </div>
+            <div class="proficiency">
+              <dt>Professional proficiency</dt>
+              <dd>English</dd>
+            </div>
+            <div class="proficiency">
+              <dt>Beginner</dt>
+              <dd>Spanish Sign Language (LSE)</dd>
+            </div>
+          </dl>
+        </section>
+      </aside>
+      <main>
+        <section id="past-experience" class="experience">
+          <article class="position">
+            <h3 class="title">Software Engineer, <a href="https://capside.com">CAPSiDE</a></h3>
+            <p class="sector">Cloud infrastructure consultancy. Internal and product development.</p>
+            <p class="location-period">Barcelona, Jan 2016 - Jan 2018</p>
+            <ul class="description">
+              <li>Developed web products used both internally and by the company's clients to manage the deployment of multiple cloud infrastructure stacks and perform blue/green application deployments for both AWS and Azure.</li>
+              <li>Developed internal web tooling that handled sales offers, request ticketing, time tracking and scheduling.</li>
               <li>Advocated for the adoption of software design concepts such as SOLID principles, design patterns, architectures and Domain-Driven Design.</li>
-              <li>Promoted software quality and maintainability principles such as code readability, refactoring, extensive testing and code reviews.</li>
+              <li>Promoted software quality and maintainability principles such as code readability, refactoring, extensive testing and Test-Driven Development.</li>
               <li>Performed internal trainings in order to introduce some of the previous concepts to the team.</li>
               <li>Defined a frontend code architecture that separates application and framework-coupled logic, allowing the application to easily adapt for the fast-changing JavaScript ecosystem.</li>
               <li>Optimized the development environments so they were easier to use, more automated and consistent with production.</li>
             </ul>
+            <p class="skills">Perl, Node.js, AngularJS, Vue.js, Elasticsearch, AWS, Azure, Ansible, Docker</p>
           </article>
 
-          <article>
-            <h3>Adjunct Lecturer in Web Projects, <a href="https://www.salleurl.edu">La Salle Campus</a></h3>
-            <p>Engineering university. Computer Engineering department.</p>
-            <p>Barcelona, Oct 2015 - Feb 2016</p>
-            <ul>
+          <article class="position">
+            <h3 class="title">Adjunct Lecturer, <a href="https://www.salleurl.edu">La Salle Campus</a></h3>
+            <h3 hidden class="title">Adjunct Lecturer in Web Projects, <a href="https://www.salleurl.edu">La Salle Campus</a></h3>
+            <p class="sector">Engineering university. Computer Engineering department.</p>
+            <p class="location-period">Barcelona, Oct 2015 - Feb 2016</p>
+            <ul class="description"l>
               <li hidden>Teached and evaluated engineering students in 2nd year subjects Web Projects and Web Programming Environments.</li>
               <li>Introduced students to web development using HTML5, CSS3, JavaScript and PHP.</li>
               <li>Guided students in the setup and use of a development environment using Vagrant, Apache, MySQL and Git.</li>
-              <li>Teached and evaluated those fields for the Web Projects and Web Programming Environments subjects.</li>
+              <li hidden>Teached and evaluated those fields for the Web Projects and Web Programming Environments subjects.</li>
             </ul>
+            <p class="skills">JavaScript, PHP, HTML5, CSS3, Git, Vagrant, Apache, MySQL</p>
           </article>
 
-          <article>
-            <h3>Teaching Assistant in Web Projects, <a href="http://www.salleurl.edu">La Salle Campus</a></h3>
-            <p>Engineering university. Computer Engineering department.</p>
-            <p>Barcelona, Feb 2013 - Sep 2013 | Feb 2014 - Sep 2014 | Feb 2015 - Sep 2015</p>
-            <ul>
+          <article class="position">
+            <h3 class="title">Teaching Assistant, <a href="http://www.salleurl.edu">La Salle Campus</a></h3>
+            <p class="sector">Engineering university. Computer Engineering department.</p>
+            <p class="location-period">Barcelona, Sep 2012 - Sep 2015</p>
+            <ul class="description">
+              <li>Introduced students to web development using Apache, MySQL, PHP frameworks and version control.</li>
+              <li>Guided and evaluated the development of a web application as part of their group project.</li>
+              <li>Introduced students to the basics of computer programming using C language and the use of the Linux command-line.</li>
+              <li>Participated in the drafting of subject materials.</li>
+            </ul>
+            <p class="skills">JavaScript, PHP, HTML5, CSS3, C, Bash, Git, Apache, MySQL</p>
+          </article>
+
+          <article hidden class="position">
+            <h3 class="title">Teaching Assistant in Web Projects, <a href="http://www.salleurl.edu">La Salle Campus</a></h3>
+            <p class="sector">Engineering university. Computer Engineering department.</p>
+            <p class="location-period">Barcelona, Feb 2013 - Sep 2015</p>
+            <p hidden class="location-period">Barcelona, Feb 2013 - Sep 2013 | Feb 2014 - Sep 2014 | Feb 2015 - Sep 2015</p>
+            <ul class="description">
               <li hidden>Guided and evaluated engineering students in the practical load of 3rd year subject Web Projects.</li>
               <li>Introduced students to web development using Apache, MySQL, PHP frameworks and version control.</li>
               <li>Guided and evaluated the development of a web application as part of their group project.</li>
               <li>Participated in the drafting of subject materials.</li>
             </ul>
+            <p class="skills">JavaScript, PHP, HTML5, CSS3, Git, Apache, MySQL</p>
           </article>
 
-          <article>
-            <h3>Intern, <a href="http://www.t-systems.es">T-Systems Iberia</a></h3>
-            <p>IT services and consulting. Automation & Tools department.</p>
-            <p>Barcelona, May 2013 - May 2014 | Oct 2014 - Jun 2015</p>
-            <p>PHP, Zend Framework, JavaScript, Bash, Pentaho, IBM Tivoli</p>
-            <ul>
-              <li>Developed cross-browser intranet web applications that implied a noticeable performance improvement in some of the company departments.</li>
-              <li>Reduced the time needed to analyze the servers status and draft monthly reports on an estimation of 12 hours per month.</li>
-              <li>Managed monitoring and data integration tools.</li>
-              <li>Participated in the automation of monitoring agent installations through the development of shell scripts.</li>
+          <article hidden class="position">
+            <h3 class="title">Teaching Assistant in Computer Programming 1, <a href="http://www.salleurl.edu">La Salle Campus</a></h3>
+            <p class="sector">Engineering university. Computer Engineering department.</p>
+            <p class="location-period">Barcelona, Sep 2012 - Jun 2013</p>
+            <ul class="description">
+              <li>Introduced students to the basics of computer programming using C language.</li>
+              <li>Introduced students to the use of the Linux command-line.</li>
+              <li>Helped students with the development in C of three small games, executed through command-line or graphical interface.</li>
             </ul>
+            <p class="skills">C, Bash</p>
           </article>
 
+          <article class="position">
+            <h3 class="title">Intern, <a href="http://www.t-systems.es">T-Systems Iberia</a></h3>
+            <p class="sector">IT services and consulting. Automation and tooling department.</p>
+            <p hidden class="sector">IT services and consulting. Automation & Tools department.</p>
+            <p class="location-period">Barcelona, May 2013 - Jun 2015</p>
+            <p hidden class="location-period">Barcelona, May 2013 - May 2014 | Oct 2014 - Jun 2015</p>
+            <ul class="description">
+              <li>Developed cross-browser internal web applications that implied a noticeable performance improvement in some of the company departments.</li>
+              <li>Reduced the time needed to analyze the servers status and draft monthly reports on an estimation of 12 hours per month.</li>
+              <li>Automated the installation of monitoring agents and managed monitoring and data integration tools.</li>
+              <li hidden>Managed monitoring and data integration tools</li>
+              <li hidden>Participated in the automation of monitoring agent installations through the development of shell scripts.</li>
+            </ul>
+            <p class="skills">JavaScript, PHP, Zend Framework, Bash, Pentaho, IBM Tivoli</p>
+          </article>
         </section>
+      </main>
+    </div>
 
-        <section id="education"></section>
-      </section>
-    </main>
   </body>
 </html>
