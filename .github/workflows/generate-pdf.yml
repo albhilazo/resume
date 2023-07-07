@@ -1,0 +1,40 @@
+name: generate-pdf
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/hydrogen
+
+      - name: Install dependencies
+        run: npm clean-install --omit=dev --ignore-scripts
+
+      - name: Setup graphical environment
+        run: |
+          sudo apt-get install xvfb
+          export DISPLAY=':99.0'
+          Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+
+      - name: Generate PDF
+        run: npm run pdf
+
+      - name: Commit PDF
+        run: |
+          git config user.name '${{ vars.GIT_NAME }}'
+          git config user.email ${{ vars.GIT_EMAIL }}
+          git add *.pdf
+          git commit -m "Automated PDF update"
+          git push
