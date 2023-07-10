@@ -24,6 +24,12 @@ jobs:
       - name: Install dependencies
         run: npm clean-install --omit=dev --ignore-scripts
 
+      - name: Electron install workaround
+        run: |
+          # Workaround "Electron failed to install correctly" error
+          cd node_modules/electron \
+          && node install.js
+
       - name: Setup graphical environment
         run: |
           sudo apt-get install xvfb
