@@ -8,14 +8,28 @@ permissions:
   contents: write
 
 jobs:
-  generate-pdf:
+  check-pdf-missing-in-commit:
     runs-on: ubuntu-latest
-    env:
-      DISPLAY: ':99.0'
+    outputs:
+      pdf_missing: ${{ steps.check-pdf-missing.outputs.pdf_missing }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Check PDF missing in commit
+        id: check-pdf-missing
+        run: |
+          git show --name-status --pretty="" | grep "\.pdf$"
+          pdf_missing=$([ $? -eq 0 ] && echo 'false' || echo 'true')
+          echo "pdf_missing=${pdf_missing}" >> "$GITHUB_OUTPUT"
+
+  generate-pdf:
+    runs-on: ubuntu-latest
+    needs: check-pdf-missing-in-commit
+    if: needs.check-pdf-missing-in-commit.outputs.pdf_missing == 'true'
+    env:
+      DISPLAY: ':99.0'
+    steps:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
