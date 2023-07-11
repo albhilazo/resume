@@ -15,12 +15,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
 
       - name: Check PDF missing in commit
         id: check-pdf-missing
         run: |
-          git show --name-status --pretty="" | grep "\.pdf$"
-          pdf_missing=$([ $? -eq 0 ] && echo 'false' || echo 'true')
+          pdf_missing=$(git show --name-status --pretty="" | grep "\.pdf$" \
+            && echo 'false' \
+            || echo 'true')
           echo "pdf_missing=${pdf_missing}" >> "$GITHUB_OUTPUT"
 
   generate-pdf:
