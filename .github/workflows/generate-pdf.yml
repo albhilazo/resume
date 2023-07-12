@@ -24,6 +24,7 @@ jobs:
           pdf_missing=$(git show --name-status --pretty="" | grep "\.pdf$" \
             && echo 'false' \
             || echo 'true')
+          echo $pdf_missing
           echo "pdf_missing=${pdf_missing}" >> "$GITHUB_OUTPUT"
 
   generate-pdf:
