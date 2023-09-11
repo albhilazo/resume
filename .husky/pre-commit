@@ -3,10 +3,22 @@
 
 branch="$(git rev-parse --abbrev-ref HEAD)"
 
+added_files=$(git diff --name-only --cached --diff-filter=d)
+
+grep -q "\.pdf$" <<< "$added_files" \
+  && pdf_added="true" \
+  || pdf_added="false"
+
 if [ "$branch" != "main" ]; then
-  echo "Skipping pre-commit hook."
+  echo "Not in main branch. Skipping pre-commit hook."
   exit 0
 fi
 
+if $pdf_added ; then
+  echo "PDF staged. Skipping PDF generation."
+  exit 0
+fi
+
+echo "Generating PDF."
 npm run pdf
 git add *.pdf
