@@ -1,0 +1,195 @@
+/* ============================================================
+   Albert Hilazo Aguilera — résumé (two A4 pages)
+   Forked from the Albhilazo design-system résumé UI kit.
+   Built on assets/colors_and_type.css tokens.
+   ============================================================ */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--neutral-100);
+  font-family: var(--font-sans);
+  color: var(--fg);
+  padding: 40px 0 64px;
+  /* ---- density knobs (overridden by body.density-compact) ---- */
+  --cv-pad-x: 44px;
+  --cv-head-pad-y: 28px;
+  --cv-rail-pad: 24px 26px;
+  --cv-main-pad-t: 24px;
+  --xp-company-gap: 16px;
+  --xp-roles-gap: 13px;
+  --xp-bullets-gap: 6px;
+  --block-gap: 19px;
+  --summary-size: 14px;
+  --bullet-size: 13px;
+  /* ---- accent knobs (overridden by body.accent-minimal) ---- */
+  --cv-dot: var(--teal-500);
+  --cv-role-dot: var(--teal-400);
+  --cv-bullet: var(--teal-400);
+  --cv-co-name: var(--accent-text);
+}
+
+/* ---------- page stack + screen separators ---------- */
+.doc { display: flex; flex-direction: column; align-items: center; gap: 0; }
+
+.page-wrap { position: relative; }
+.page-label {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--neutral-500);
+  margin: 22px 0 22px;
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+}
+.page-label::before, .page-label::after {
+  content: ''; height: 1px; width: 64px; background: var(--border-strong);
+}
+
+.page {
+  width: 794px;            /* A4 @ 96dpi */
+  min-height: 1123px;
+  background: var(--neutral-0);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: 256px 1fr;
+  grid-template-rows: auto 1fr;
+  align-content: start;
+}
+
+/* ---------- Masthead (spans both columns) ---------- */
+.cv-head { grid-column: 1 / -1; padding: var(--cv-head-pad-y) var(--cv-pad-x) 20px; border-bottom: 1px solid var(--border); }
+.cv-name { font-size: 38px; font-weight: 700; letter-spacing: -0.025em; line-height: 1; }
+.cv-name .dot { color: var(--cv-dot); }
+.cv-role { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-text); margin-top: 12px; }
+.cv-summary { font-size: var(--summary-size); line-height: 1.6; color: var(--fg-secondary); max-width: 64ch; margin-top: 13px; }
+
+/* ---------- Slim page-2 band (spans both columns) ---------- */
+.cv-band {
+  grid-column: 1 / -1;
+  padding: 18px var(--cv-pad-x);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.cv-band-id { display: flex; align-items: center; gap: 13px; }
+.cv-band-mono { width: 30px; height: 30px; flex: none; }
+.cv-band-name { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
+.cv-band-name .dot { color: var(--cv-dot); }
+.cv-band-meta { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-muted); white-space: nowrap; }
+
+/* ---------- Left rail ---------- */
+.cv-rail { background: var(--neutral-50); border-right: 1px solid var(--border); padding: var(--cv-rail-pad); }
+.cv-rail .block { margin-bottom: var(--block-gap); }
+.cv-rail .block:last-child { margin-bottom: 0; }
+.rail-h { font-family: var(--font-mono); font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-deep); margin: 0 0 9px; }
+
+.contact-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+.contact-list li { display: flex; align-items: center; gap: 9px; font-size: 12.5px; color: var(--fg-secondary); }
+.contact-list svg { width: 14px; height: 14px; color: var(--fg-faint); flex: none; }
+.contact-list .ic-tag { width: 14px; height: 14px; flex: none; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 8.5px; font-weight: 600; color: var(--fg-faint); border: 1px solid var(--border-strong); border-radius: 3px; }
+
+.chip-set { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-family: var(--font-mono); font-size: 11px; white-space: nowrap; padding: 3px 8px; border-radius: var(--radius-sm); background: var(--neutral-0); border: 1px solid var(--border); color: var(--fg-secondary); }
+
+.plain-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+.plain-list li { font-size: 12.5px; line-height: 1.4; color: var(--fg-secondary); }
+
+.edu-item { margin-bottom: 13px; }
+.edu-item:last-child { margin-bottom: 0; }
+.edu-item .d { font-size: 12.5px; font-weight: 600; color: var(--fg); line-height: 1.35; }
+.edu-item .q { font-size: 11.5px; color: var(--fg-secondary); margin-top: 3px; }
+.edu-item .q .code { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.02em; color: var(--fg-muted); background: none; padding: 0; border-radius: 0; }
+.edu-item .s { font-size: 11.5px; color: var(--fg-muted); margin-top: 2px; }
+.edu-item .s .code { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.02em; color: var(--fg-faint); background: none; padding: 0; border-radius: 0; }
+.edu-type { font-family: var(--font-mono); font-size: 9px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 3px; }
+
+.lang-item { display: flex; justify-content: space-between; gap: 8px; font-size: 12.5px; margin-bottom: 6px; }
+.lang-item:last-child { margin-bottom: 0; }
+.lang-item .lvl { color: var(--fg-muted); font-family: var(--font-mono); font-size: 11px; }
+
+/* ---------- Main column ---------- */
+.cv-main { padding: var(--cv-main-pad-t) var(--cv-pad-x) 40px; }
+.cv-main > .rail-h { font-size: 11px; margin-bottom: 18px; }
+
+/* Company group — header (sector + location) over one or more roles. */
+.xp-company { padding-bottom: var(--xp-company-gap); margin-bottom: var(--xp-company-gap); border-bottom: 1px solid var(--border-faint); }
+.xp-company:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+.xp-co-name { font-size: 15.5px; font-weight: 700; line-height: 1.3; color: var(--cv-co-name); }
+.xp-cont { font-weight: 400; font-size: 12px; font-style: italic; color: var(--fg-muted); letter-spacing: 0; }
+.xp-co-meta { font-size: 12px; color: var(--fg-muted); font-style: italic; margin-top: 3px; }
+
+/* Roles hang off a vertical rail so single- and multi-role groups read alike. */
+.xp-roles { margin-top: 13px; margin-left: 4px; padding-left: 21px; border-left: 1.5px solid var(--border); display: flex; flex-direction: column; gap: var(--xp-roles-gap); }
+.xp-role-item { position: relative; }
+.xp-role-item::before { content: ''; position: absolute; left: -26px; top: 4px; width: 9px; height: 9px; border-radius: 50%; background: var(--cv-role-dot); box-shadow: 0 0 0 2.5px var(--neutral-0); }
+.xp-role-head { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; }
+.xp-role-title { font-size: 14px; font-weight: 600; line-height: 1.35; }
+.xp-role-sub { font-size: 12px; font-style: italic; color: var(--fg-muted); margin-top: 2px; line-height: 1.3; }
+.xp-when { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em; color: var(--fg-muted); white-space: nowrap; flex: none; }
+.xp-bullets { list-style: none; margin: 7px 0 0; padding: 0; display: flex; flex-direction: column; gap: var(--xp-bullets-gap); }
+.xp-bullets li { position: relative; padding-left: 16px; font-size: var(--bullet-size); line-height: 1.5; color: var(--fg-secondary); }
+.xp-bullets li::before { content: ''; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: var(--cv-bullet); }
+.xp-stack { font-family: var(--font-mono); font-size: 10.5px; color: var(--fg-faint); margin-top: 7px; line-height: 1.5; }
+.xp-role-item.is-condensed .xp-stack { margin-top: 6px; }
+
+/* Extra-condensed: title + dates only; pull the rail up tight to the name. */
+.xp-company.is-tight { padding-bottom: 14px; margin-bottom: 14px; }
+.xp-company.is-tight .xp-roles { margin-top: 7px; }
+.xp-co-loc { font-weight: 400; font-style: italic; font-size: 12px; color: var(--fg-muted); margin-left: 8px; }
+.xp-co-loc::before { content: '· '; font-style: normal; }
+
+/* ============================================================
+   DENSITY — compact variant (screen + print)
+   ============================================================ */
+body.density-compact {
+  --cv-head-pad-y: 30px;
+  --cv-rail-pad: 24px 24px;
+  --cv-main-pad-t: 24px;
+  --xp-company-gap: 15px;
+  --xp-roles-gap: 13px;
+  --xp-bullets-gap: 5px;
+  --block-gap: 20px;
+  --summary-size: 13.5px;
+  --bullet-size: 12.5px;
+}
+body.density-compact .cv-summary { margin-top: 13px; }
+body.density-compact .cv-name { font-size: 34px; }
+
+/* ============================================================
+   ACCENT — minimal variant (less teal in the body)
+   ============================================================ */
+body.accent-minimal {
+  --cv-dot: var(--fg);
+  --cv-role-dot: var(--fg-muted);
+  --cv-bullet: var(--fg-muted);
+  --cv-co-name: var(--fg);
+}
+
+/* ============================================================
+   PRINT — one .page per physical A4 sheet
+   ============================================================ */
+@page { size: A4; margin: 0; }
+
+@media print {
+  body { background: #fff; padding: 0; }
+  .doc { gap: 0; }
+  .page-label { display: none; }
+
+  .page {
+    box-shadow: none;
+    width: 210mm;
+    min-height: 297mm;
+    break-after: page;
+    page-break-after: always;
+  }
+  .page:last-child { break-after: auto; page-break-after: avoid; }
+
+  /* B&W-safe adjustments: teal accents carry no contrast in grayscale,
+     so re-encode their emphasis with weight and ink-dark fills. */
+  .xp-co-name { color: var(--fg); }
+  .cv-name .dot, .cv-band-name .dot { color: var(--fg); }
+  .chip { border-color: var(--border-strong); }
+  .xp-bullets li::before,
+  .xp-role-item::before { background: var(--fg-muted); }
+}
