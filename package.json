@@ -2,20 +2,15 @@
   "name": "resume",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "live-server",
-    "pdf": "electron-pdf $INIT_CWD/index.html $INIT_CWD/Albert-Hilazo-Aguilera-resume.pdf",
-    "prepare": "husky install"
+    "dev": "browser-sync start --server --files 'index.html, resume.css, assets/**/*.css'",
+    "pdf": "node scripts/pdf.mjs"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "electron-pdf": "^20.0.0",
-    "paper-css": "^0.4.1"
+    "puppeteer": "^22.0.0"
   },
   "devDependencies": {
-    "husky": "^8.0.3",
-    "live-server": "^1.2.2"
+    "browser-sync": "^3.0.3"
   }
 }

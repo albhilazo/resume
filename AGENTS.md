@@ -15,11 +15,14 @@ This repository contains my personal resume, authored in HTML and CSS and export
 
 ## PDF Generation
 
-Open `index.html` in a browser and print to PDF (A4, no margins). The `@media print` block in `resume.css` handles page breaks and grayscale-safe adjustments automatically.
+Run `npm run pdf` to generate the PDF locally. The script starts a temporary HTTP server (required because the page loads Google Fonts and Lucide icons from CDN), renders the page with headless Chrome via Puppeteer, and writes `Albert-Hilazo-Aguilera-resume.pdf`.
+
+The GitHub Actions workflow (`generate-pdf.yml`) runs automatically on any push that changes `index.html`, `resume.css`, or `assets/`. It regenerates the PDF and commits it back to the same branch, so the PDF is always up to date in PRs and on `main`.
 
 ## Development
 
-- `npm run dev` — starts a live-reload server for local editing
+- `npm run dev` — starts a browser-sync live-reload server (`localhost:3000`); CSS changes inject without a full page reload
+- `npm run pdf` — generates the PDF locally
 - Edit `index.html` directly for content changes
 - Edit `resume.css` for layout and print formatting
 - Edit `assets/colors_and_type.css` for design tokens (colors, spacing, type scale)
