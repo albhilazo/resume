@@ -27,11 +27,10 @@ jobs:
       - name: Install dependencies
         run: npm clean-install
 
-      - name: Install Chrome
-        run: npx puppeteer browsers install chrome
-
       - name: Generate PDF
         run: npm run pdf
+        env:
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome-stable
 
       - name: Commit PDF
         run: |
