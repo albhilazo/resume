@@ -1,502 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Albert Hilazo Aguilera</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Albert Hilazo Aguilera — Résumé</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-dark-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-dark-192.png">
+  <meta name="theme-color" content="#15201E">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="assets/colors_and_type.css">
+  <link rel="stylesheet" href="resume.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <div class="doc">
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <!-- ===================== PAGE 1 ===================== -->
+    <div class="page-wrap">
+      <div class="page" data-screen-label="Page 1">
 
-    <style>
-      @page {
-        size: A4;
-      }
-    </style>
-  </head>
-  <body class="A4">
-    <div class="sheet padding-10mm sheet-layout">
-      <header>
-        <h1>Albert Hilazo Aguilera</h1>
+        <!-- Masthead -->
+        <header class="cv-head">
+          <div class="cv-name">Albert Hilazo Aguilera<span class="dot">.</span></div>
+          <div class="cv-role">Full-stack Software Engineer · Team Lead</div>
+          <p class="cv-summary">A full-stack software engineer with a wide background of roles and environments; always with a strong interest in the related best practices, able to work on all levels of an application and enabling growth of other team members. Currently leading a team while staying close to engineering practice.</p>
+        </header>
 
-        <section id="profile">
-          <h2 hidden>Profile</h2>
-          <p>
-            An experienced full-stack software engineer with a diverse background in various roles and environments. Currently leveraging my expertise to lead the technical direction of a complex project, influence the adoption of architectural best practices within the organization, and provide mentorship to other team members.
-          </p>
-        </section>
-      </header>
-      <aside>
-        <section id="contact">
-          <h2 hidden>Contact</h2>
-          <ul class="list-style-reset">
-            <li class="location">Barcelona, Spain</li>
-            <li class="phone">+34 651015548</li>
-            <li class="email">albhilazo@gmail.com</li>
-            <!--<li class="website">
-              <a href="http://albhilazo.com">albhilazo.com</a>
-            </li>-->
-            <li class="linkedin">
-              <a href="https://linkedin.com/in/albhilazo"
-                >linkedin.com/in/albhilazo</a
-              >
-            </li>
-            <li class="github">
-              <a href="https://github.com/albhilazo">github.com/albhilazo</a>
-            </li>
-          </ul>
-        </section>
-        <h2 hidden>Technical Skills</h2>
-        <section id="programming-languages" class="tech-skills">
-          <h3>Programming languages</h3>
-          <ul class="list-style-reset">
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>Node.js</li>
-            <li>Vue.js</li>
-            <li hidden>AngularJS</li>
-            <li>React.js</li>
-            <li hidden>React Native</li>
-            <li>Java</li>
-            <li>Spring Boot</li>
-            <li>PHP</li>
-            <li>Python</li>
-            <li>Pandas</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>Bash</li>
-            <li hidden>SQL</li>
-          </ul>
-        </section>
-        <section id="practices-methodologies" class="tech-skills">
-          <h3>Practices and methodologies</h3>
-          <ul class="list-style-reset">
-            <li>Test-Driven Development</li>
-            <li>Behavior-Driven Development</li>
-            <li>Pair Programming</li>
-            <li>Trunk-based Development</li>
-            <li>Continuous Integration</li>
-            <li>Continuous Delivery</li>
-            <li>SOLID Principles</li>
-            <li>Clean Architecture</li>
-            <li>Domain-Driven Design</li>
-            <li>Experimental Design</li>
-            <li hidden>People Care</li>
-            <li hidden>People Development</li>
-            <li>On-call Support</li>
-            <li>Service Levels</li>
-            <li>DevOps</li>
-            <li>Site Reliability Engineering</li>
-            <li>Infrastructure as Code</li>
-            <li hidden>Linux systems</li>
-            <li>Observability</li>
-          </ul>
-        </section>
-      </aside>
-      <main>
-        <section id="recent-experience" class="experience">
-          <h2>Professional Experience</h2>
-          
-          <article class="position">
-            <h3 class="title">
-              Team Lead,
-              <a href="https://www.biocatch.com/">BioCatch</a>
-            </h3>
-            <p class="sector">Banking Cybersecurity. Software engineering.</p>
-            <p class="location-period">Barcelona, Jan 2026 - Present</p>
-            <ul class="description">
-              <li>
-                Grew a team from 3 to 9 members across management, principal engineering,
-                and development roles, with 4 direct reports.
-              </li>
-              <li>
-                Led a 10-person cross-team squad for one of the company's main projects,
-                drawing engineers from two teams across development, data engineering,
-                and DevOps disciplines.
-              </li>
+        <!-- Left rail — contact + capabilities -->
+        <aside class="cv-rail">
+          <div class="block">
+            <h3 class="rail-h">Contact</h3>
+            <ul class="contact-list">
+              <li><i data-lucide="map-pin"></i>Barcelona, Spain</li>
+              <li><i data-lucide="phone"></i>+34 651 015 548</li>
+              <li><i data-lucide="mail"></i>albhilazo@gmail.com</li>
+              <li><i data-lucide="globe"></i>albhilazo.com</li>
+              <li><span class="ic-tag">in</span>linkedin.com/in/albhilazo</li>
+              <li><span class="ic-tag">gh</span>github.com/albhilazo</li>
             </ul>
-          </article>
+          </div>
 
-          <article class="position">
-            <h3 class="title">
-              Technical Lead,
-              <a href="https://www.biocatch.com/">BioCatch</a>
-            </h3>
-            <p class="sector">Banking Cybersecurity. Software engineering.</p>
-            <p class="location-period">Barcelona, Apr 2025 - Dec 2025</p>
-            <ul class="description">
-              <li>
-                Led the technical direction of a business-critical project, defining strategic initiatives,
-                aligning the team around a shared engineering vision, and providing hands-on guidance
-                throughout implementation.
-              </li>
-              <li>
-                Introduced an Epic Owner model, coaching developers through end-to-end feature ownership —
-                from scope negotiation and requirements refinement to solution design and delivery —
-                reducing bottlenecks and driving faster, more autonomous development cycles.
-              </li>
-              <li>
-                Implemented an Observability strategy from scratch, defining minimum required monitoring data,
-                establishing collection and processing best practices, and enabling efficient alerting and
-                troubleshooting workflows.
-              </li>
-            </ul>
-          </article>
+          <div class="block">
+            <h3 class="rail-h">Languages</h3>
+            <div class="chip-set">
+              <span class="chip">JavaScript</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">Vue.js</span>
+              <span class="chip">React.js</span>
+              <span class="chip">Java</span>
+              <span class="chip">Spring Boot</span>
+              <span class="chip">PHP</span>
+              <span class="chip">Python</span>
+              <span class="chip">Pandas</span>
+              <span class="chip">Perl</span>
+              <span class="chip">HTML5</span>
+              <span class="chip">CSS3</span>
+              <span class="chip">Bash</span>
+            </div>
+          </div>
 
-          <article class="position">
-            <h3 class="title">
-              Senior FullStack Developer,
-              <a href="https://www.biocatch.com/">BioCatch</a>
-            </h3>
-            <p class="sector">Banking Cybersecurity. Software engineering.</p>
-            <p class="location-period">Barcelona, Nov 2023 - Mar 2025</p>
-            <ul class="description">
-              <li>
-                Initiated a new fraud analysis platform, designing the full architecture to prioritize rapid development and scalability for an MVP.
-              </li>
-              <li>
-                Designed and implemented a micro-frontends architecture as a first for the team, establishing guidelines for addressing the project's socio-technical requirements through it.
-              </li>
-              <li>
-                Built features for the early stages of an ambitious project, ensuring adaptability to evolving requirements and potential changes in direction.
-              </li>
-              <li>
-                Drove improvements in working practices, including managing code complexity, raising test quality standards, and streamlining development cycles.
-              </li>
-            </ul>
-            <p class="skills">
-              TypeScript, React.js, Storybook, NestJS, Python, gRPC, Snowflake, Datadog, GitHub Actions
-            </p>
-          </article>
+          <div class="block">
+            <h3 class="rail-h">Practices &amp; methods</h3>
+            <div class="chip-set">
+              <span class="chip">TDD</span>
+              <span class="chip">BDD</span>
+              <span class="chip">Pair Programming</span>
+              <span class="chip">Trunk-based Dev</span>
+              <span class="chip">Continuous Delivery</span>
+              <span class="chip">SOLID</span>
+              <span class="chip">Clean Architecture</span>
+              <span class="chip">DDD</span>
+              <span class="chip">SRE</span>
+              <span class="chip">IaC</span>
+              <span class="chip">Observability</span>
+            </div>
+          </div>
 
-          <article class="position">
-            <h3 class="title">
-              Senior Consultant Developer for Medical Innovation Company,
-              <a href="https://www.thoughtworks.com">Thoughtworks</a>
-            </h3>
-            <p class="sector">Technology consultancy. Software engineering.</p>
-            <p class="location-period">Barcelona, Jan 2023 - Oct 2023</p>
-            <ul class="description">
-              <li>
-                Built a scalable data processing platform from the ground up using Infrastructure as Code and serverless cloud services, enabling seamless deployment across multiple regions and global customer access.
-              </li>
-              <li>
-                Developed a data visualization web application that processed data from medical IoT devices transmitting multiple data points per second and presented it for analysis aggregated at various scales.
-              </li>
-              <li>
-                Ensured compliance with medical software regulations while maintaining the stability of infrastructure and application, facilitating long-term maintainability for a small development team.
-              </li>
-            </ul>
-            <p class="skills">
-              TypeScript, Node.js, React.js, GraphQL, Python, Pandas, AWS, AWS CDK, GitHub Actions
-            </p>
-          </article>
-          
-          <article class="position">
-            <h3 class="title">
-              Senior Consultant Developer for Energy Market Company,
-              <a href="https://www.thoughtworks.com">Thoughtworks</a>
-            </h3>
-            <p class="sector">Technology consultancy. Software engineering.</p>
-            <p class="location-period">Barcelona, Mar 2021 - Dec 2022</p>
-            <ul class="description">
-              <li>
-                Led the technical direction of a six-person team and fostered the professional development of its members, increasing their involvement in backlog refinement and mitigating knowledge silos.
-              </li>
-              <li>
-                Provided guidance to both new and existing teams in the adoption of practices such as Pair Programming, Test-Driven Development (TDD), Trunk-based Development, and Continuous Delivery.
-              </li>
-              <li>
-                Developed customer-facing web features through an experimentation approach, employing metrics and user interviews to validate hypotheses and direct feature development efforts.
-              </li>
-              <li>
-                Designed and developed a flexible workflow for data manipulation processes, enabling the seamless addition and removal of experimental features without compromising the user experience.
-              </li>
-            </ul>
-            <p class="skills">
-              Javascript, Vue.js, Java, Spring Boot, Python, Pandas, AirFlow, AWS, Terraform, Datadog, Jenkins
-            </p>
-          </article>
-          
-          <article class="position">
-            <h3 class="title">
-              Site Reliability Engineer for Online Car Marketplace,
-              <a href="https://www.thoughtworks.com">Thoughtworks</a>
-            </h3>
-            <p class="sector">Technology consultancy. Software engineering.</p>
-            <p class="location-period">Barcelona, Nov 2018 - Feb 2021</p>
-            <ul class=”description”>
-              <li>
-                Maintained infrastructure supporting 250 production services with on-call coverage, then guided development teams in adopting DevOps and Observability practices to assume full ownership of their services.
-              </li>
-              <li>
-                Led numerous workshops on the definition of Service Level Objectives and the identification of criticality when alerting for various services.
-              </li>
-              <li>
-                Operated platform infrastructure including Kubernetes and Elasticsearch clusters, continuously identifying areas for improvement and cost optimization.
-              </li>
-              <li>
-                Developed platform tooling to assist development teams in managing their AWS resources and Datadog monitoring using Infrastructure as Code.
-              </li>
-              <li>
-                Migrated services from a datacenter to the cloud using a “lift and shift” approach.
-              </li>
-            </ul>
-            <p class="skills">
-              AWS, Kubernetes, Elasticsearch, Datadog, AWS Cloudformation, AWS CDK, Python, Javascript, Jenkins
-            </p>
-          </article>
+          <div class="block">
+            <h3 class="rail-h">Tools &amp; cloud</h3>
+            <div class="chip-set">
+              <span class="chip">AWS</span>
+              <span class="chip">Datadog</span>
+              <span class="chip">AWS CDK</span>
+              <span class="chip">CloudFormation</span>
+              <span class="chip">Terraform</span>
+              <span class="chip">Jenkins</span>
+              <span class="chip">GitHub Actions</span>
+              <span class="chip">GraphQL</span>
+              <span class="chip">gRPC</span>
+              <span class="chip">Lambda</span>
+              <span class="chip">ECS</span>
+              <span class="chip">AirFlow</span>
+              <span class="chip">Docker</span>
+              <span class="chip">Kubernetes</span>
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">DynamoDB</span>
+              <span class="chip">Snowflake</span>
+              <span class="chip">Elasticsearch</span>
+            </div>
+          </div>
+        </aside>
 
-          <article class="position">
-            <h3 class="title">
-              Consultant Developer for European Commission project,
-              <a href="https://www.thoughtworks.com">Thoughtworks</a>
-            </h3>
-            <p class="sector">Technology consultancy. Software engineering.</p>
-            <p class="location-period">Barcelona, Jan 2018 - Oct 2018</p>
-            <ul class="description">
-              <li>
-                Developed and published a mobile application for both Android and iOS devices, employing
-                cryptographic protocols for secure, verified, and anonymous low-scale electronic voting.
-              </li>
-              <li>
-                Developed backend services that integrated the components of a personal data protection
-                platform, built in collaboration with multiple European companies.
-              </li>
-            </ul>
-            <p class="skills">
-              JavaScript, React Native, Python, FastAPI, AWS, Docker
-            </p>
-          </article>
-        </section>
-      </main>
+        <!-- Main — most recent experience -->
+        <main class="cv-main">
+          <h2 class="rail-h">Professional experience</h2>
+
+          <!-- BioCatch — three sequential roles -->
+          <div class="xp-company is-multi">
+            <div class="xp-co-head">
+              <div class="xp-co-name">BioCatch</div>
+              <div class="xp-co-meta">Banking cybersecurity · software engineering · Barcelona</div>
+            </div>
+            <div class="xp-roles">
+              <div class="xp-role-item">
+                <div class="xp-role-head">
+                  <span class="xp-role-title">Team Lead</span>
+                  <span class="xp-when">Jan 2026 — Present</span>
+                </div>
+                <ul class="xp-bullets">
+                  <li>Grew a team from 3 to 9 members across management, principal engineering, and development roles, with 4 direct reports.</li>
+                  <li>Led a 10-person cross-team squad for one of the company's main projects, drawing engineers from two teams across development, data engineering, and DevOps disciplines.</li>
+                </ul>
+                <div class="xp-stack">People management, Hiring &amp; team growth, Cross-team coordination, Delivery planning, Stakeholder alignment</div>
+              </div>
+              <div class="xp-role-item">
+                <div class="xp-role-head">
+                  <span class="xp-role-title">Technical Lead</span>
+                  <span class="xp-when">Apr 2025 — Dec 2025</span>
+                </div>
+                <ul class="xp-bullets">
+                  <li>Led the technical direction of a business-critical project, defining strategic initiatives, aligning the team around a shared engineering vision, and providing hands-on guidance throughout implementation.</li>
+                  <li>Introduced an Epic Owner model, coaching developers through end-to-end feature ownership, from scope negotiation and requirements refinement to solution design and delivery, reducing bottlenecks and driving faster, more autonomous development cycles.</li>
+                  <li>Implemented an Observability strategy from scratch, defining minimum required monitoring data and establishing collection, processing, and alerting best practices.</li>
+                </ul>
+                <div class="xp-stack">Technical strategy, Engineering vision, Developer coaching, Observability, Requirements negotiation, Epic ownership model</div>
+              </div>
+              <div class="xp-role-item">
+                <div class="xp-role-head">
+                  <span class="xp-role-title">Senior Full Stack Developer</span>
+                  <span class="xp-when">Nov 2023 — Mar 2025</span>
+                </div>
+                <ul class="xp-bullets">
+                  <li>Initiated a new fraud analysis platform, designing the full architecture to prioritize rapid development and scalability for an MVP.</li>
+                  <li>Designed and implemented a micro-frontends architecture as a first for the team, establishing guidelines for the project's socio-technical requirements.</li>
+                  <li>Built features for the early stages of an ambitious project, ensuring adaptability to evolving requirements and direction.</li>
+                  <li>Drove improvements in working practices, including managing code complexity, raising test quality standards, and streamlining development cycles.</li>
+                </ul>
+                <div class="xp-stack">TypeScript, React.js, Storybook, NestJS, Python, gRPC, Snowflake, Datadog, GitHub Actions</div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <div class="page-label">Page 1 of 2</div>
     </div>
 
-    <div class="sheet padding-10mm sheet-layout">
-      <aside>
-        <section id="tools-technologies" class="tech-skills">
-          <h3>Tools and technologies</h3>
-          <ul class="list-style-reset">
-            <li>AWS</li>
-            <li hidden>Azure</li>
-            <li>Datadog</li>
-            <li>AWS CloudWatch</li>
-            <li>AWS CloudFormation</li>
-            <li>AWS CDK</li>
-            <li>Terraform</li>
-            <li hidden>Ansible</li>
-            <li hidden>Puppet</li>
-            <li hidden>Vagrant</li>
-            <li hidden>Git</li>
-            <li>Jenkins</li>
-            <li>GitHub Actions</li>
-            <li hidden>Google Analytics</li>
-            <li hidden>Hotjar</li>
-            <li>GraphQL</li>
-            <li>AWS AppSync</li>
-            <li hidden>Json Web Token</li>
-            <li>AWS EC2</li>
-            <li>AWS Lambda</li>
-            <li>AWS ECS</li>
-            <li>Apache AirFlow</li>
-            <li>Docker</li>
-            <li>Kubernetes</li>
-            <li>MySQL</li>
-            <li>PostgreSQL</li>
-            <li>AWS DynamoDB</li>
-            <li>AWS Timestream</li>
-            <li>Elasticsearch</li>
-            <li hidden>Jupyter Notebook</li>
-            <li hidden>Subversion</li>
-          </ul>
-        </section>
-        <section id="education">
-          <h3>Education</h3>
-          <dl>
-            <div class="course">
-              <a
-                href="https://www.credly.com/badges/6e26e912-5270-4fc6-ad7b-da43d30d16d1/public_url"
-                ><dt>
-                  AWS Certified Solutions Architect - Associate SAA-C03
-                </dt></a
-              >
-              <dd>Amazon Web Services, 2023</dd>
-            </div>
-            <div class="course">
-              <a href="https://verify.acloud.guru/50AF28B5D4A2"
-                ><dt>Course AWS Certified Developer - Associate DVA-C02</dt></a
-              >
-              <dd>A Cloud Guru, 2023</dd>
-            </div>
-            <div hidden class="course">
-              <dt>Architecting on AWS</dt>
-              <dd>CAPSiDE AWS Training, 2017</dd>
-            </div>
-            <div class="course">
-              <dt>Course Essentials of Linux System Administration LFS201</dt>
-              <dd>Linux Foundation, 2017</dd>
-            </div>
-            <div class="course">
-              <dt>Master's Degree in High Performance Web Programming</dt>
-              <dd>La Salle Barcelona, 2016</dd>
-            </div>
-            <div class="course">
-              <dt>Engineer's Degree in Computer Engineering</dt>
-              <dd>La Salle Barcelona, 2015</dd>
-            </div>
-          </dl>
-        </section>
-        <section id="languages">
-          <h3>Languages</h3>
-          <dl>
-            <div class="proficiency">
-              <dt>Native</dt>
-              <dd>Spanish</dd>
-              <dd>Catalan</dd>
-            </div>
-            <div class="proficiency">
-              <dt>Professional proficiency</dt>
-              <dd>English</dd>
-            </div>
-            <div class="proficiency">
-              <dt>Beginner</dt>
-              <dd>Spanish Sign Language (LSE)</dd>
-            </div>
-          </dl>
-        </section>
-      </aside>
-      <main>
-        <section id="past-experience" class="experience">
-          <article class="position">
-            <h3 class="title">
-              Software Engineer, <a href="https://capside.com">CAPSiDE</a>
-            </h3>
-            <p class="sector">
-              Cloud infrastructure consultancy. Internal and product
-              development.
-            </p>
-            <p class="location-period">Barcelona, Jan 2016 - Jan 2018</p>
-            <p class="skills">
-              Perl, Node.js, AngularJS, Vue.js, Elasticsearch, AWS, Azure,
-              Ansible, Docker
-            </p>
-          </article>
+    <!-- ===================== PAGE 2 ===================== -->
+    <div class="page-wrap">
+      <div class="page" data-screen-label="Page 2">
 
-          <article class="position">
-            <h3 class="title">
-              Adjunct Lecturer,
-              <a href="https://www.salleurl.edu">La Salle Campus</a>
-            </h3>
-            <h3 hidden class="title">
-              Adjunct Lecturer in Web Projects,
-              <a href="https://www.salleurl.edu">La Salle Campus</a>
-            </h3>
-            <p class="sector">
-              Engineering university. Computer Engineering department.
-            </p>
-            <p class="location-period">Barcelona, Oct 2015 - Feb 2016</p>
-            <p class="skills">
-              JavaScript, PHP, HTML5, CSS3, Git, Vagrant, Apache, MySQL
-            </p>
-          </article>
+        <!-- Slim repeated band -->
+        <header class="cv-band">
+          <div class="cv-band-id">
+            <img class="cv-band-mono" src="assets/logo-monogram.svg" alt="ah. monogram">
+            <div class="cv-band-name">Albert Hilazo Aguilera<span class="dot">.</span></div>
+          </div>
+          <div class="cv-band-meta">Résumé · Page 2 of 2</div>
+        </header>
 
-          <article class="position">
-            <h3 class="title">
-              Teaching Assistant,
-              <a href="http://www.salleurl.edu">La Salle Campus</a>
-            </h3>
-            <p class="sector">
-              Engineering university. Computer Engineering department.
-            </p>
-            <p class="location-period">Barcelona, Sep 2012 - Sep 2015</p>
-            <p class="skills">
-              JavaScript, PHP, HTML5, CSS3, C, Bash, Git, Apache, MySQL
-            </p>
-          </article>
+        <!-- Left rail — education -->
+        <aside class="cv-rail">
+          <div class="block">
+            <h3 class="rail-h">Education</h3>
+            <div class="edu-item">
+              <div class="edu-type">Certification</div>
+              <div class="d">AWS Solutions Architect</div>
+              <div class="q">Associate · <span class="code">SAA-C03</span></div>
+              <div class="s">2023 · Amazon Web Services</div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-type">Course</div>
+              <div class="d">AWS Developer</div>
+              <div class="q">Associate · <span class="code">DVA-C02</span></div>
+              <div class="s">2023 · A Cloud Guru</div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-type">Course</div>
+              <div class="d">Essentials of Linux System Administration</div>
+              <div class="q"><span class="code">LFS201</span></div>
+              <div class="s">2017 · Linux Foundation</div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-type">Degree</div>
+              <div class="d">High Performance Web Programming</div>
+              <div class="q">Master's degree</div>
+              <div class="s">2016 · La Salle Barcelona</div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-type">Degree</div>
+              <div class="d">Computer Engineering</div>
+              <div class="q">Engineer's degree</div>
+              <div class="s">2015 · La Salle Barcelona</div>
+            </div>
+          </div>
 
-          <article hidden class="position">
-            <h3 class="title">
-              Teaching Assistant in Web Projects,
-              <a href="http://www.salleurl.edu">La Salle Campus</a>
-            </h3>
-            <p class="sector">
-              Engineering university. Computer Engineering department.
-            </p>
-            <p class="location-period">Barcelona, Feb 2013 - Sep 2015</p>
-            <p hidden class="location-period">
-              Barcelona, Feb 2013 - Sep 2013 | Feb 2014 - Sep 2014 | Feb 2015 -
-              Sep 2015
-            </p>
-            <ul class="description">
-              <li hidden>
-                Guided and evaluated engineering students in the practical load
-                of 3rd year subject Web Projects.
-              </li>
-              <li>
-                Introduced students to web development using Apache, MySQL, PHP
-                frameworks and version control.
-              </li>
-              <li>
-                Guided and evaluated the development of a web application as
-                part of their group project.
-              </li>
-              <li>Participated in the drafting of subject materials.</li>
-            </ul>
-            <p class="skills">
-              JavaScript, PHP, HTML5, CSS3, Git, Apache, MySQL
-            </p>
-          </article>
+          <div class="block">
+            <h3 class="rail-h">Languages</h3>
+            <div class="lang-item"><span>Spanish</span><span class="lvl">Native</span></div>
+            <div class="lang-item"><span>Catalan</span><span class="lvl">Native</span></div>
+            <div class="lang-item"><span>English</span><span class="lvl">Professional</span></div>
+            <div class="lang-item"><span>Sign (LSE)</span><span class="lvl">Beginner</span></div>
+          </div>
+        </aside>
 
-          <article hidden class="position">
-            <h3 class="title">
-              Teaching Assistant in Computer Programming 1,
-              <a href="http://www.salleurl.edu">La Salle Campus</a>
-            </h3>
-            <p class="sector">
-              Engineering university. Computer Engineering department.
-            </p>
-            <p class="location-period">Barcelona, Sep 2012 - Jun 2013</p>
-            <ul class="description">
-              <li>
-                Introduced students to the basics of computer programming using
-                C language.
-              </li>
-              <li>Introduced students to the use of the Linux command-line.</li>
-              <li>
-                Helped students with the development in C of three small games,
-                executed through command-line or graphical interface.
-              </li>
-            </ul>
-            <p class="skills">C, Bash</p>
-          </article>
+        <!-- Main — Thoughtworks, projects 1–2 -->
+        <main class="cv-main">
+          <h2 class="rail-h">Professional experience — continued</h2>
 
-          <article class="position">
-            <h3 class="title">
-              Software Engineer Intern,
-              <a href="http://www.t-systems.es">T-Systems Iberia</a>
-            </h3>
-            <p class="sector">
-              IT services and consulting. Automation and tooling department.
-            </p>
-            <p hidden class="sector">
-              IT services and consulting. Automation & Tools department.
-            </p>
-            <p class="location-period">Barcelona, May 2013 - Jun 2015</p>
-            <p hidden class="location-period">
-              Barcelona, May 2013 - May 2014 | Oct 2014 - Jun 2015
-            </p>
-            <p class="skills">
-              JavaScript, PHP, Zend Framework, Bash, Pentaho, IBM Tivoli
-            </p>
-          </article>
-        </section>
-      </main>
+          <div class="xp-company is-multi">
+            <div class="xp-co-head">
+              <div class="xp-co-name">Thoughtworks</div>
+              <div class="xp-co-meta">Technology consultancy · Barcelona</div>
+            </div>
+            <div class="xp-roles">
+              <div class="xp-role-item">
+                <div class="xp-role-head">
+                  <span class="xp-role-title">Senior Consultant Developer</span>
+                  <span class="xp-when">Jan 2023 — Oct 2023</span>
+                </div>
+                <div class="xp-role-sub">Medical innovation company</div>
+                <ul class="xp-bullets">
+                  <li>Built a scalable data processing platform from the ground up using Infrastructure as Code and serverless cloud services, enabling seamless deployment across multiple regions and global customer access.</li>
+                  <li>Developed a data visualization web application that processed data from medical IoT devices transmitting multiple data points per second, presenting it for analysis aggregated at various scales.</li>
+                </ul>
+                <div class="xp-stack">TypeScript, Node.js, React.js, GraphQL, Python, Pandas, AWS CDK, GitHub Actions</div>
+              </div>
+              <div class="xp-role-item">
+                <div class="xp-role-head">
+                  <span class="xp-role-title">Technical Lead</span>
+                  <span class="xp-when">Mar 2021 — Dec 2022</span>
+                </div>
+                <div class="xp-role-sub">Energy market company</div>
+                <ul class="xp-bullets">
+                  <li>Led the technical direction of a six-person team and fostered the professional development of its members, increasing their involvement in backlog refinement and mitigating knowledge silos.</li>
+                  <li>Designed a flexible workflow for data manipulation processes, enabling seamless addition and removal of experimental features without compromising the user experience.</li>
+                </ul>
+                <div class="xp-stack">JavaScript, Vue.js, Java, Spring Boot, Python, Pandas, AirFlow, AWS, Terraform, Datadog, Jenkins</div>
+              </div>
+              <div class="xp-role-item is-condensed">
+                <div class="xp-role-head">
+                  <span class="xp-role-title">Site Reliability Engineer</span>
+                  <span class="xp-when">Nov 2018 — Feb 2021</span>
+                </div>
+                <div class="xp-role-sub">Online car marketplace</div>
+                <div class="xp-stack">Kubernetes, Elasticsearch, Datadog, AWS CloudFormation, AWS CDK, Python, JavaScript, Jenkins</div>
+              </div>
+              <div class="xp-role-item is-condensed">
+                <div class="xp-role-head">
+                  <span class="xp-role-title">Consultant Developer</span>
+                  <span class="xp-when">Feb 2018 — Oct 2018</span>
+                </div>
+                <div class="xp-role-sub">European Commission project</div>
+                <div class="xp-stack">JavaScript, React Native, Expo, Python, FastAPI, AWS, Docker</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CAPSiDE -->
+          <div class="xp-company is-tight">
+            <div class="xp-co-head">
+              <div class="xp-co-name">CAPSiDE<span class="xp-co-loc">Barcelona</span></div>
+            </div>
+            <div class="xp-roles">
+              <div class="xp-role-item is-extra">
+                <div class="xp-role-head">
+                  <span class="xp-role-title">Software Engineer</span>
+                  <span class="xp-when">Jan 2016 — Jan 2018</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- La Salle Campus — two roles -->
+          <div class="xp-company is-multi is-tight">
+            <div class="xp-co-head">
+              <div class="xp-co-name">La Salle Campus<span class="xp-co-loc">Barcelona</span></div>
+            </div>
+            <div class="xp-roles">
+              <div class="xp-role-item is-extra">
+                <div class="xp-role-head">
+                  <span class="xp-role-title">Adjunct Lecturer</span>
+                  <span class="xp-when">Oct 2015 — Feb 2016</span>
+                </div>
+              </div>
+              <div class="xp-role-item is-extra">
+                <div class="xp-role-head">
+                  <span class="xp-role-title">Teaching Assistant</span>
+                  <span class="xp-when">Sep 2012 — Sep 2015</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- T-Systems Iberia -->
+          <div class="xp-company is-tight">
+            <div class="xp-co-head">
+              <div class="xp-co-name">T-Systems Iberia<span class="xp-co-loc">Barcelona</span></div>
+            </div>
+            <div class="xp-roles">
+              <div class="xp-role-item is-extra">
+                <div class="xp-role-head">
+                  <span class="xp-role-title">Software Engineer Intern</span>
+                  <span class="xp-when">May 2013 — Jun 2015</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <div class="page-label">Page 2 of 2</div>
     </div>
-  </body>
+
+  </div>
+
+  <script>
+    if (window.lucide) lucide.createIcons();
+  </script>
+</body>
 </html>
