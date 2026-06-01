@@ -78,6 +78,12 @@ Role with **no bullets**: keep the head, optional `.xp-role-sub`, and the `.xp-s
 line. Used for older roles where the stack is enough (older Thoughtworks projects).
 Just add `is-condensed` and omit the `<ul class="xp-bullets">`.
 
+### Page-budget bullets — `<li hidden>`
+When a bullet from the source notes exists but is intentionally excluded from the
+rendered resume due to page space, keep it in the markup as `<li hidden>…</li>` inside
+the existing `<ul class="xp-bullets">`. This preserves the content in the source
+without affecting the visual output, and avoids silent divergence from the notes.
+
 ### C. Tight company — `.xp-company.is-tight` + `.xp-role-item.is-extra`
 **Title + dates only.** No `.xp-co-meta` line; fold the location into the name with
 `.xp-co-loc`. No bullets, no stack. Used for the oldest entries (CAPSiDE, La Salle,
