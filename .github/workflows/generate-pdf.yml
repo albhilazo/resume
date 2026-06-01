@@ -17,11 +17,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - name: Check if PDF was already updated in this commit
         id: pdf-check
         run: |
-          if git diff --name-only HEAD~1 HEAD | grep -q 'Albert-Hilazo-Aguilera-resume.pdf'; then
+          if git diff --name-only HEAD~1 HEAD | grep -q '\.pdf$'; then
             echo "skip=true" >> "$GITHUB_OUTPUT"
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
@@ -49,6 +51,6 @@ jobs:
         run: |
           git config user.name '${{ vars.GIT_NAME }}'
           git config user.email '${{ vars.GIT_EMAIL }}'
-          git add Albert-Hilazo-Aguilera-resume.pdf
+          git add '*.pdf'
           git diff --staged --quiet || git commit -m "Automated PDF update"
           git push
