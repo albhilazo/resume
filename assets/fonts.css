@@ -1,7 +1,13 @@
 /* ============================================================
    Albhilazo — Web fonts
    Primary: IBM Plex Sans  ·  Mono: IBM Plex Mono
-   Loaded from Google Fonts. To self-host, drop woff2 files in
-   this folder and replace the @import with @font-face rules.
+   Self-hosted via @fontsource npm packages (no CDN dependency).
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@import url('/node_modules/@fontsource/ibm-plex-sans/300.css');
+@import url('/node_modules/@fontsource/ibm-plex-sans/400.css');
+@import url('/node_modules/@fontsource/ibm-plex-sans/500.css');
+@import url('/node_modules/@fontsource/ibm-plex-sans/600.css');
+@import url('/node_modules/@fontsource/ibm-plex-sans/700.css');
+@import url('/node_modules/@fontsource/ibm-plex-mono/400.css');
+@import url('/node_modules/@fontsource/ibm-plex-mono/500.css');
+@import url('/node_modules/@fontsource/ibm-plex-mono/600.css');
