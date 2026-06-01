@@ -63,7 +63,7 @@ body {
 .cv-name { font-size: 38px; font-weight: 700; letter-spacing: -0.025em; line-height: 1; }
 .cv-name .dot { color: var(--cv-dot); }
 .cv-role { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-text); margin-top: 12px; }
-.cv-summary { font-size: var(--summary-size); line-height: 1.6; color: var(--fg-secondary); max-width: 64ch; margin-top: 13px; }
+.cv-summary { font-size: var(--summary-size); line-height: 1.6; color: var(--fg-secondary); max-width: 72ch; margin-top: 13px; }
 
 /* ---------- Slim page-2 band (spans both columns) ---------- */
 .cv-band {
