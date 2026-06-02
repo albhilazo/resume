@@ -13,19 +13,19 @@ body {
   padding: 40px 0 64px;
   /* ---- density knobs (overridden by body.density-compact) ---- */
   --cv-pad-x: 44px;
-  --cv-head-pad-y: 28px;
-  --cv-rail-pad: 24px 26px;
+  --cv-head-pad-y: 13mm;
+  --cv-rail-pad: 24px 26px 8mm;
   --cv-main-pad-t: 24px;
   --xp-company-gap: 16px;
   --xp-roles-gap: 13px;
   --xp-bullets-gap: 6px;
-  --block-gap: 19px;
+  --block-gap: 28px;
   --summary-size: 14px;
   --bullet-size: 13px;
   /* ---- accent knobs (overridden by body.accent-minimal) ---- */
   --cv-dot: var(--teal-500);
-  --cv-role-dot: var(--teal-400);
-  --cv-bullet: var(--teal-400);
+  --cv-role-dot: var(--teal-500);
+  --cv-bullet: var(--teal-500);
   --cv-co-name: var(--accent-text);
 }
 
@@ -68,7 +68,7 @@ body {
 /* ---------- Slim page-2 band (spans both columns) ---------- */
 .cv-band {
   grid-column: 1 / -1;
-  padding: 18px var(--cv-pad-x);
+  padding: 6mm var(--cv-pad-x) 4mm;
   border-bottom: 1px solid var(--border);
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
 }
@@ -109,7 +109,7 @@ body {
 .lang-item .lvl { color: var(--fg-muted); font-family: var(--font-mono); font-size: 11px; }
 
 /* ---------- Main column ---------- */
-.cv-main { padding: var(--cv-main-pad-t) var(--cv-pad-x) 40px; }
+.cv-main { padding: var(--cv-main-pad-t) var(--cv-pad-x) 8mm; }
 .cv-main > .rail-h { font-size: 11px; margin-bottom: 18px; }
 
 /* Company group — header (sector + location) over one or more roles. */
@@ -144,7 +144,7 @@ body {
    ============================================================ */
 body.density-compact {
   --cv-head-pad-y: 30px;
-  --cv-rail-pad: 24px 24px;
+  --cv-rail-pad: 24px 24px 8mm;
   --cv-main-pad-t: 24px;
   --xp-company-gap: 15px;
   --xp-roles-gap: 13px;
@@ -172,6 +172,8 @@ body.accent-minimal {
 @page { size: A4; margin: 0; }
 
 @media print {
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
   body { background: #fff; padding: 0; }
   .doc { gap: 0; }
   .page-label { display: none; }
@@ -184,12 +186,4 @@ body.accent-minimal {
     page-break-after: always;
   }
   .page:last-child { break-after: auto; page-break-after: avoid; }
-
-  /* B&W-safe adjustments: teal accents carry no contrast in grayscale,
-     so re-encode their emphasis with weight and ink-dark fills. */
-  .xp-co-name { color: var(--fg); }
-  .cv-name .dot, .cv-band-name .dot { color: var(--fg); }
-  .chip { border-color: var(--border-strong); }
-  .xp-bullets li::before,
-  .xp-role-item::before { background: var(--fg-muted); }
 }
