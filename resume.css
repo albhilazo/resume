@@ -13,13 +13,13 @@ body {
   padding: 40px 0 64px;
   /* ---- density knobs (overridden by body.density-compact) ---- */
   --cv-pad-x: 44px;
-  --cv-head-pad-y: 28px;
-  --cv-rail-pad: 24px 26px;
-  --cv-main-pad-t: 24px;
-  --xp-company-gap: 16px;
-  --xp-roles-gap: 13px;
-  --xp-bullets-gap: 6px;
-  --block-gap: 19px;
+  --cv-head-pad-y: 12px;
+  --cv-rail-pad: 22px 24px;
+  --cv-main-pad-t: 16px;
+  --xp-company-gap: 15px;
+  --xp-roles-gap: 11px;
+  --xp-bullets-gap: 4px;
+  --block-gap: 28px;
   --summary-size: 14px;
   --bullet-size: 13px;
   /* ---- accent knobs (overridden by body.accent-minimal) ---- */
@@ -59,11 +59,11 @@ body {
 }
 
 /* ---------- Masthead (spans both columns) ---------- */
-.cv-head { grid-column: 1 / -1; padding: var(--cv-head-pad-y) var(--cv-pad-x) 20px; border-bottom: 1px solid var(--border); }
-.cv-name { font-size: 38px; font-weight: 700; letter-spacing: -0.025em; line-height: 1; }
+.cv-head { grid-column: 1 / -1; padding: var(--cv-head-pad-y) var(--cv-pad-x) 12px; border-bottom: 1px solid var(--border); }
+.cv-name { font-size: 33px; font-weight: 700; letter-spacing: -0.025em; line-height: 1; }
 .cv-name .dot { color: var(--cv-dot); }
-.cv-role { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-text); margin-top: 12px; }
-.cv-summary { font-size: var(--summary-size); line-height: 1.6; color: var(--fg-secondary); max-width: 72ch; margin-top: 13px; }
+.cv-role { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-text); margin-top: 10px; }
+.cv-summary { font-size: var(--summary-size); line-height: 1.45; color: var(--fg-secondary); max-width: 72ch; margin-top: 10px; }
 
 /* ---------- Slim page-2 band (spans both columns) ---------- */
 .cv-band {
@@ -109,7 +109,7 @@ body {
 .lang-item .lvl { color: var(--fg-muted); font-family: var(--font-mono); font-size: 11px; }
 
 /* ---------- Main column ---------- */
-.cv-main { padding: var(--cv-main-pad-t) var(--cv-pad-x) 40px; }
+.cv-main { padding: var(--cv-main-pad-t) var(--cv-pad-x) 14px; }
 .cv-main > .rail-h { font-size: 11px; margin-bottom: 18px; }
 
 /* Company group — header (sector + location) over one or more roles. */
@@ -143,18 +143,18 @@ body {
    DENSITY — compact variant (screen + print)
    ============================================================ */
 body.density-compact {
-  --cv-head-pad-y: 30px;
-  --cv-rail-pad: 24px 24px;
-  --cv-main-pad-t: 24px;
-  --xp-company-gap: 15px;
-  --xp-roles-gap: 13px;
-  --xp-bullets-gap: 5px;
-  --block-gap: 20px;
-  --summary-size: 13.5px;
-  --bullet-size: 12.5px;
+  --cv-head-pad-y: 8px;
+  --cv-rail-pad: 18px 22px;
+  --cv-main-pad-t: 12px;
+  --xp-company-gap: 13px;
+  --xp-roles-gap: 9px;
+  --xp-bullets-gap: 3px;
+  --block-gap: 22px;
+  --summary-size: 13px;
+  --bullet-size: 12px;
 }
-body.density-compact .cv-summary { margin-top: 13px; }
-body.density-compact .cv-name { font-size: 34px; }
+body.density-compact .cv-summary { margin-top: 8px; line-height: 1.4; }
+body.density-compact .cv-name { font-size: 31px; }
 
 /* ============================================================
    ACCENT — minimal variant (less teal in the body)
@@ -188,7 +188,11 @@ body.accent-minimal {
   /* B&W-safe adjustments: teal accents carry no contrast in grayscale,
      so re-encode their emphasis with weight and ink-dark fills. */
   .xp-co-name { color: var(--fg); }
-  .cv-name .dot, .cv-band-name .dot { color: var(--fg); }
+  .cv-name .dot, .cv-band-name .dot {
+    color: var(--teal-500);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
   .chip { border-color: var(--border-strong); }
   .xp-bullets li::before,
   .xp-role-item::before { background: var(--fg-muted); }
