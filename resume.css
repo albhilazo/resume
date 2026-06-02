@@ -188,7 +188,7 @@ body.accent-minimal {
   /* B&W-safe adjustments: teal accents carry no contrast in grayscale,
      so re-encode their emphasis with weight and ink-dark fills. */
   .xp-co-name { color: var(--fg); }
-  .cv-name .dot, .cv-band-name .dot { color: var(--fg); }
+  .cv-name .dot, .cv-band-name .dot { color: var(--teal-500); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .chip { border-color: var(--border-strong); }
   .xp-bullets li::before,
   .xp-role-item::before { background: var(--fg-muted); }
